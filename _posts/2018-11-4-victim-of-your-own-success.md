@@ -9,7 +9,7 @@ Sometimes your own successes come back to hurt you. My dad likes to reference th
 
 In this post I'm going to talk about a simple game-theoretic scenario that illustrates this phenomenon.
 
-First, let's introduce the concept of **Nash equilibrium**. We'll consider symmetric, zero-sum, 2-player games. In such a game, each player picks a move simultaneously. These are then revealed, and each player deterministically receives a payout as a function of the two moves. The game is *symmetric* when the two players have the same move set, and swapping moves swaps the payoffs. It is *zero-sum* if the payoffs add up to zero -- that is, however much I win, you must lose, and vice-versa.
+First, let's introduce the concept of **Nash equilibrium**. We'll consider symmetric, zero-sum, 2-player games. In such a game, each player picks a move simultaneously. These are then revealed, and each player deterministically receives a payout as a function of the two moves. The game is *symmetric* when the two players have the same move set, and swapping moves swaps the payoffs. It is *zero-sum* if the payoffs add up to zero -- that is, however much I win, you must lose, and vice-versa. Such a game can be represented by an antisymmetric matrix of payoffs for each move combination.
 
 The classic example of this class of game is Rock-Paper-Scissors (RPS), where wins are +1, losses -1, and ties 0. But actually quite a lot of games can be seen as falling under this category, if we relax the constraint on determinstic payoffs. Take, for example, Super Smash Bros., a popular series of fighting games from Nintendo. Smash players love to make tier lists ranking the different characters in terms of competitive viability, both on an absolute scale and on a matchup-by-matchup basis. For example, [this chart](https://docs.google.com/spreadsheets/d/1uekrvvZUDFGphbZ7LAyXpyspOuqvNX7I2HZvtwAoWSQ) shows that Fox beats Peach 60-40. What this means is that if two skilled players fight with Fox vs Peach, the Fox *should win* 60% of the time on average. So, we can view Smash Bros. as a symmetric, zero-sum, 2-player game with *stochastic* payoffs, where the "moves" are the possible characters that can be picked.
 
@@ -32,6 +32,10 @@ And now for the fun part. Let's consider a fictitious scenario where Blizzard is
 (I originally heard this puzzle from my friend Jon Schneider in the context of SSBM: suppose Marth > Fox 60-40, Fox > Sheik 70-30, and Sheik > Marth 60-40.)
 
 ### Solution
+
+This is just some filler text so that you don't immediately see the solution. Scroll up if you don't want to be spoiled! Even if you can't figure it out intuitively, you can try to solve for the solution with linear algebra and gain some insight that way.
+
+----
 
 Surprisingly, the playrate of A should actually *go down* to 25%, along with B. It is in fact C who benefits from this change, with its playrate going up to 50%. My intuitive "explanation" goes like this: first, the playrate of A shouldn't go below that of B (that would be crazy!), and the playrate of B should decrease. In response to the decreasing playrate of B, C should increase. The increase in C and decrease in B are both bad for A, so A might stay the same or decrease. This gives you the C > A >= B ordering.
 
