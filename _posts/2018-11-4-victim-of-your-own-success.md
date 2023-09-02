@@ -17,7 +17,7 @@ The obvious question to ask about any game is: what's the best way to win? But i
 
 When both players choose the optimal mixed strategy, the expected result is 0-0, and neither player will be able to do any better by switching to a different strategy. In general, such a scenario is known as a [Nash equilbrium](https://en.wikipedia.org/wiki/Nash_equilibrium) -- in an n-player game, it is a set of mixed strategies for each player such that no one would prefer to deviate to a different strategy than the one they already have.
 
-For advanced readers: show that Nash equlibria for symmetric zero-sum 2-player games can be computed with linear programming.
+For advanced readers: show that Nash equlibria for zero-sum 2-player games can be computed with linear programming. The symmetric case may be slightly easier.
 
 ## Games and Metagames
 
@@ -44,4 +44,3 @@ A more rigorous explanation starts by noticing that, due to their anti-symmetric
 In the general case, if the A-B matchup is shifted in A's favor by 10x%, then C:A:B ratio will be (x+1):1:1.
 
 And now for the punchline: it could be said that A was a victim of its own success.
-
